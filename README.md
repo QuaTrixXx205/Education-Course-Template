@@ -1,1 +1,1 @@
-# Education-Course-Template
+# EducationCenter

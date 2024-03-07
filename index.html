@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Center</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/res.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap">
+    <!-- SwipperJS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="Wrapper">
+        <div class="nav bg-white-color">
+            <div id="mySidenav-Search" class="sidenav-Search">
+                <div class="input-search search-input-bar" style="position: relative;">
+                    <form action="" class="md:block">
+                        <input type="text" class="h-15" style="background-color: #F2F2F2;" placeholder="Search course...">
+                        <i class="fa-solid fa-search fa-font-bigger" style="position: absolute; top: 50%; right: 10%; transform: translateY(-50%); color: #0071DC;"></i>
+                    </form>
+                </div>
+                <div class="zone-close-Search" onclick="closeNav_Search()">
+                </div>
+            </div>
+            <div id="mySidenav" class="sidenav">
+                <div class="sidenav-content">
+                    <ul>
+                        <div style="width: 100%; display: flex; align-items: center; background-color: white;">
+                            <li style="text-align: left;" class="no-border sidenav-logo"><img class="logo" src="https://edumall.vuejstemplate.com/images/logo/dark-logo.png" alt=""></li>
+                            <i class="fa-solid fa-x" onclick="closeNav()" style="color: black; margin-right: 30px; cursor: pointer;"></i>
+                        </div>
+                        <li class="d-flex-sq  space-between white-text"><a href="#">Home</a><i class="fas fa-angle-down rotate" onclick="toggleDropdown('homeDropdown')" style="margin-right: 20px; cursor: pointer;"></i></li>
+                            <div id="homeDropdown" class="dropdown-content">
+                            <div class="dropdown-core">
+                             <a href="#">Home 1</a>
+                             <a href="#">Home 2</a>
+                             <a href="#">Home 3</a>
+                            </div>
+                            </div>
+                        <li class="d-flex-sq  space-between white-text"><a href="#">Courses</a><i class="fas fa-angle-down rotate" onclick="toggleDropdown('courseDropdown')" style="margin-right: 20px; cursor: pointer;"></i></li>
+                            <div id="courseDropdown" class="dropdown-content">
+                            <div class="dropdown-core">
+                             <a href="#">Courses 1</a>
+                             <a href="#">Courses 2</a>
+                             <a href="#">Courses 3</a>
+                            </div>
+                            </div>
+                        <li class="d-flex-sq  space-between white-text"><a href="#">Blog</a><i class="fas fa-angle-down rotate" onclick="toggleDropdown('blogDropdown')" style="margin-right: 20px; cursor: pointer;"></i></li>
+                            <div id="blogDropdown" class="dropdown-content">
+                            <div class="dropdown-core">
+                             <a href="#">Blog 1</a>
+                             <a href="#">Blog 2</a>
+                             <a href="#">Blog 3</a>
+                            </div>
+                            </div>
+                        <li class="d-flex-sq space-between white-text"><a href="#">Pages</a><i class="fas fa-angle-down rotate" onclick="toggleDropdown('pageDropdown')" style="margin-right: 20px; cursor: pointer;"></i></li>
+                            <div id="pageDropdown" class="dropdown-content">
+                            <div class="dropdown-core">
+                             <a href="#">Pages 1</a>
+                             <a href="#">Pages 2</a>
+                             <a href="#">Pages 3</a>
+                            </div>
+                            </div>
+                        <li class="d-flex-sq space-between white-text"><a href="#">Features</a><i class="fas fa-angle-down rotate" onclick="toggleDropdown('featureDropdown')" style="margin-right: 20px; cursor: pointer;"></i></li>
+                            <div id="featureDropdown" class="dropdown-content">
+                            <div class="dropdown-core">
+                             <a href="#">Features 1</a>
+                             <a href="#">Features 2</a>
+                             <a href="#">Features 3</a>
+                            </div>
+                            </div>
+                    </ul>
+                </div>
+                <div class="zone-close-sidebar" onclick="closeNav()">
+                </div>
+            </div>
+            <div>
+                <ul class="space-around container-sq">
+                    <div class="d-flex-sq it-center">
+                        <li><a href="#"><img class="logo" src="https://edumall.vuejstemplate.com/images/logo/dark-logo.png" alt=""></a></li>
+                        <div class="this-hide-1440px d-flex-sq">
+                            <li class="dropdown"><a href="#">Home <i class="fa-solid fa-angle-down"></i></a>
+                                <div class="dropdown-content">
+                                    <div class="dropdown-core">
+                                     <a href="#">Home 1</a>
+                                     <a href="#">Home 2</a>
+                                     <a href="#">Home 3</a>
+                                    </div>
+                                </div>
+                            <li class="dropdown"><a href="#">Courses <i class="fa-solid fa-angle-down"></i></a>
+                                <div class="dropdown-content">
+                                    <div class="dropdown-core">
+                                     <a href="#">Courses 1</a>
+                                     <a href="#">Courses 2</a>
+                                     <a href="#">Courses 3</a>
+                                    </div>
+                                 </div>
+                            </li>
+                            <li class="dropdown"><a href="#">Blog <i class="fa-solid fa-angle-down"></i></a>
+                                <div class="dropdown-content">
+                                    <div class="dropdown-core">
+                                     <a href="#">Blog 1</a>
+                                     <a href="#">Blog 2</a>
+                                     <a href="#">Blog 3</a>
+                                    </div>
+                                 </div>
+                            </li>
+                            <li class="dropdown"><a href="#">Pages <i class="fa-solid fa-angle-down"></i></a>
+                                <div class="dropdown-content">
+                                    <div class="dropdown-core">
+                                     <a href="#">Pages 1</a>
+                                     <a href="#">Pages 2</a>
+                                     <a href="#">Pages 3</a>
+                                    </div>
+                                 </div>
+                            </li>
+                            <li class="dropdown"><a href="#">Features <i class="fa-solid fa-angle-down"></i></a>
+                                <div class="dropdown-content">
+                                    <div class="dropdown-core">
+                                     <a href="#">Features 1</a>
+                                     <a href="#">Features 2</a>
+                                     <a href="#">Features 3</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="d-flex-sq it-center">
+                        <div class="this-hide-766px input-search d-flex-sq " style="position: relative;">
+                            <form action="" class="md:block">
+                                <input type="text" class="h-15" style="background-color: #F2F2F2;" placeholder="Search course...">
+                                <i class="fa-solid fa-search" style="position: absolute; top: 50%; right: 10%; transform: translateY(-50%); color: #0071DC;"></i>
+                            </form>
+                        </div>
+                        <div class="toggle-bar d-none-sq m-left-15 this-block-1440px"><i class="fa-solid fa-bars fa-font-bigger" onclick="openNav()"></i></div>
+                        <div class="toggle-bar d-none-sq m-left-15 this-block-766px"><i class="fa-solid fa-search fa-font-bigger m-left-30" onclick="openNav_Search()"></i></div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <!-- Course detail -->
+            <!-- Course breadcrumbs -->
+            <div class="course-breadcrumb-navigation">
+                <ul class="course-breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li>Successful Negotiation: Master Your Negotiating Skills</li>
+                </ul>
+            </div>
+
+            <!-- Course header -->
+            <div class="container course-detail">
+                <div class="course-detail-header-wrapper">    
+                    <!-- course type and discount -->
+                    <div class="course-type-discount">
+                        <div class="course-discount-tag"><span>-39%</span></div>
+                        <div class="course-type"><a href="#">Development</a></div>
+                    </div>  
+                    <!-- course title -->
+                    <div class="course-detail-title">
+                        <h2>Successful Negotiation: Master Your Negotiating Skills</h2>
+                    </div>
+                    <!-- course instructor and last update -->
+                    <div class="course-detail-instructor-date">
+                        <ul>
+                            <li style="display: flex; align-items: center;">
+                                <img src="https://edumall.vuejstemplate.com/images/instructor/instructor-01.jpg" class="course-instructor-title-img">
+                                 <span style="font-weight: bold; text-wrap: nowrap;">Parra Victoria</span>
+                             </li>
+                            <li>Last Update: <span>November 26, 2023</span></li>
+                        </ul>
+                    </div>
+                    <!-- course rating and people enrolled -->
+                    <div class="course-rating-enroll">
+                        <ul>
+                            <li style="display: flex; align-items: center;">
+                                <div style="font-weight: 600; margin-right: 20px;"><span>4.5</span>/5</div>
+                                <div>
+                                    <span style="color: #F7C04D;">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-user"></i>
+                                <span style="margin-left: 10px;">10</span> already enrolled
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course detail content -->
+            <div class="course-detail-content">
+                <!-- course description -->
+                <div class="container course-detail-description">
+                    <!-- About this course -->
+                    <div class="course-detail-about">
+                        <h2>About This Course</h2>
+                        <div style="margin: 20px 0;">
+                            <div>
+                                <p>In this course, I take you from the fundamentals and concepts of data modeling all the way through a number of best practices and techniques that you’ll need to build data models in your organization. You’ll find many examples that clearly demonstrate the key concepts and techniques covered throughout the course.</p> 
+                            </div>
+                            <br>
+                            <div>
+                                <p>By the end of the course, you’ll be all set to not only put these principles to work, but also to make the key data modeling and design decisions required by the “art” of data modeling that transcend the nuts-and-bolts techniques and design patterns.</p>
+                            </div>
+                        </div>
+                        <div class="course-about-tags">
+                            <span><i class="fa-solid fa-tag"></i></span>
+                            <a href="#">marketing</a>
+                            <a href="#">branding</a>
+                            <a href="#">business</a>
+                        </div>
+                    </div>
+                    <!-- Course objective -->
+                    <div class="course-detail-objective">
+                        <h2>Learning Ojectives</h2>
+                        <div class="course-objective-info">
+                            <div>
+                                <i class="fa-regular fa-circle-check"></i>
+                                <spanp>Ready to begin working on real-world data modeling projects</spanp>
+                            </div>
+                            <div>
+                                <i class="fa-regular fa-circle-check"></i>
+                                <spanp>Expanded responsibilities as part of an existing role</spanp>
+                            </div>
+                            <div>
+                                <i class="fa-regular fa-circle-check"></i>
+                                <spanp>Find a new position involving data modeling</spanp>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Course requirement -->
+                    <div class="course-detail-requirement">
+                        <h2>Course Requirements</h2>
+                        <div>
+                            <i class="fa-regular fa-circle-check"></i>
+                            <span>Basic understanding of data management concepts and constructs such as relational database tables</span>
+                        </div>
+                        <div>
+                            <i class="fa-regular fa-circle-check"></i>
+                            <span>Know how different pieces of data logically relate to one another.</span>
+                        </div>
+                    </div>
+                    <!-- Course target audience -->
+                    <div class="course-detail-target-audience">
+                        <h2>Target Audience</h2>
+                        <div>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <span>A business analyst</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <span>Data engineer, or database designer</span>
+                        </div>
+                    </div>
+                    <!-- Course Curriculum -->
+                    <div class="course-curriculum">
+                        <!-- Curriculum info -->
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div><h2>Curriculum</h2></div>
+                            <div style="display: flex; align-items: center;">
+                                <div style="font-weight: 600;"><span>4</span> lessons</div>
+                                <span style="margin-left: 30px;">16h 30m</spa>
+                            </div>
+                        </div>
+                        <!-- Curriculum courses -->
+                        <div class="course-curriculum-item">
+                            <details open style="padding: 20px 30px; border: 0.5px solid rgb(214, 214, 214); border-radius: 5px; cursor: pointer; user-select: none; margin-bottom: 20px;">
+                                <summary>Descriptive Statitis</summary>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <i class="fa-regular fa-file-lines"></i>    
+                                            <span>The importance of data nowsaday</span>
+                                        </div>
+                                        <div>
+                                            <i class="fa-solid fa-lock"></i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <i class="fa-regular fa-file-lines"></i>    
+                                            <span> Why my organization should know about data</span>
+                                        </div>
+                                        <div>
+                                            <i class="fa-solid fa-lock"></i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <i class="fa-regular fa-file-lines"></i>    
+                                            <span> Calculate basic probability</span>
+                                        </div>
+                                        <div>
+                                            <i class="fa-solid fa-lock"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </details>
+                            <details style="padding: 20px 30px; border: 0.5px solid rgb(214, 214, 214); border-radius: 5px; cursor: pointer; user-select: none;">
+                                <summary>Apply the principles</summary>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <i class="fa-regular fa-file-lines"></i>    
+                                            <span>The importance of data nowsaday</span>
+                                        </div>
+                                        <div>
+                                            <i class="fa-solid fa-lock"></i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <i class="fa-regular fa-file-lines"></i>    
+                                            <span> Why my organization should know about data</span>
+                                        </div>
+                                        <div>
+                                            <i class="fa-solid fa-lock"></i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <i class="fa-regular fa-file-lines"></i>    
+                                            <span> Calculate basic probability</span>
+                                        </div>
+                                        <div>
+                                            <i class="fa-solid fa-lock"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+                    <!-- Course instructor -->
+                    <div class="course-instructor">
+                        <h2>Your Instructor</h2>
+                        <div class="course-instructor-wrapper">
+                            <div class="course-instructor-img">
+                                <img src="https://edumall.vuejstemplate.com/images/instructor/instructor-01.jpg" alt="">
+                            </div>
+                            <div class="course-instructor-info">
+                                <h3>Parra Victoria</h3>
+                                <div style="margin: 20px 0;">
+                                    <span style="color: #F7C04D; margin-right: 10px;">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <span>
+                                        5 
+                                    </span> /5
+                                </div>
+                                <div style="display: flex; align-items: center;">
+                                    <div class="course-instructor-status">
+                                        <i class="fa-regular fa-circle-play"></i>
+                                        <span>6</span> Course
+                                    </div>
+                                    <div class="course-instructor-status">
+                                        <i class="fa-regular fa-message"></i>
+                                        <span>15</span> Reviews
+                                    </div>
+                                    <div class="course-instructor-status">
+                                        <i class="fa-regular fa-user"></i>
+                                        <span>150</span> Students
+                                    </div>
+                                </div>
+                                <div style="margin: 20px 0;">
+                                    <a href="#" class="course-instructor-more-info" ><i class="fa-solid fa-plus"></i> See More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- course student feedback -->
+                    <div class="course-student-feedback">
+                        <h2>Student Feedback</h2>
+                        <div class="course-student-feedback-wrapper">
+                            <div class="course-feedback-status">
+                                <h1>4.5</h1>
+                                <span style="color: #F7C04D; text-wrap: nowrap;">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                                <div> <span>12</span> Ratings </div>
+                            </div>
+                            <div class="course-feedback-rating">
+                                <!-- 5 stars -->
+                                <div>
+                                    <span style="color: #F7C04D;">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <progress id="course-student-feedback" value="75" max="100"></progress>
+                                    <label for="course-student-feedback">75%</label>
+                                </div>
+                                <!-- 4 stars -->
+                                <div>
+                                    <span style="color: #F7C04D;">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </span>
+                                    <progress id="course-student-feedback" value="25" max="100"></progress>
+                                    <label for="course-student-feedback">25%</label>
+                                </div>
+                                <!-- 3 stars -->
+                                <div>
+                                    <span style="color: #F7C04D;">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </span>
+                                    <progress id="course-student-feedback" value="15" max="100"></progress>
+                                    <label for="course-student-feedback">15%</label>
+                                </div>
+                                <!-- 2 stars -->
+                                <div>
+                                    <span style="color: #F7C04D;">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </span>
+                                    <progress id="course-student-feedback" value="0" max="100"></progress>
+                                    <label for="course-student-feedback">0%</label>
+                                </div>
+                                <!-- 1 stars -->
+                                <div>
+                                    <span style="color: #F7C04D;">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </span>
+                                    <progress id="course-student-feedback" value="10" max="100"></progress>
+                                    <label for="course-student-feedback">10%</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- course write a review -->
+                    <div class="course-write-review">
+                        <h2>Write a review</h2>
+                        <div style="display: flex; justify-content: space-between;">
+                            <input type="text" id="yourName" name="yourName" placeholder="Your Name *" class="course-review-userName">
+                            <input type="email" id="yourEmail" name="yourEmail" placeholder="Your Email *" class="course-review-userEmail">
+                        </div>
+                        <div>
+                            <textarea name="yourComment" id="yourComment" cols="30" rows="10" class="course-review-comment" placeholder="Write your comment"></textarea>
+                        </div>
+                        <div class="course-review-save-user-data">
+                            <input type="checkbox" id="saveUserData" name="saveUserData" style="margin-right: 20px;">
+                            <label for="saveUserData" style="cursor: pointer;">Save my name, email, and website in this browser for the next time I comment.</label>
+                        </div>
+                        <div>
+                            <input type="submit" class="course-review-submit-btn">
+                        </div>
+                    </div>
+                </div>
+                <div class="course-right-side">
+                    <!-- Information label -->
+                    <div class="course-information-label">
+                        <!-- video -->
+                        <div>
+                            <iframe src="https://www.youtube.com/embed/z_9Z9VWhaEQ" frameborder="0" width="100%" height="315" style="border-top-left-radius: 5px; border-top-right-radius: 5px;"></iframe>
+                        </div>
+                        <!-- information (price, level, durations...) -->
+                        <div class="corse-price">
+                            <p>$<span>39.00</span></p>
+                        </div>
+                        <!-- levels -->
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 30px;">
+                            <div>
+                                <i class="fa-solid fa-bars"></i>
+                                <span>Levels:</span>
+                            </div>
+                            <div>
+                                <span>All Levels</span>
+                            </div>
+                        </div>
+                        <hr style="width: 85%; margin: 0 auto;">
+                        <!-- duration -->
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 30px;">
+                            <div>
+                                <i class="fa-solid fa-clock"></i>
+                                <span>Duration: </span>
+                            </div>
+                            <div>
+                                <span>7.5</span> hours
+                            </div>
+                        </div>
+                        <hr style="width: 85%; margin: 0 auto;">
+                        <!-- lectures -->
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 30px;">
+                            <div>
+                                <i class="fa-solid fa-circle-play"></i>
+                                <span>Lectures: </span>
+                            </div>
+                            <div>
+                                <span>36</span> lectures
+                            </div>
+                        </div>
+                        <hr style="width: 85%; margin: 0 auto;">
+                        <!-- subject -->
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 30px;">
+                            <div>
+                                <i class="fa-solid fa-tag"></i>
+                                <span>Subject: </span>
+                            </div>
+                            <div>
+                                <span>Development</span> 
+                            </div>
+                        </div>
+                        <hr style="width: 85%; margin: 0 auto;">
+                        <!-- language -->
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 30px;">
+                            <div>
+                                <i class="fa-solid fa-globe"></i>
+                                <span>Language: </span>
+                            </div>
+                            <div>
+                                <span>English</span> 
+                            </div>
+                        </div>
+                        <!-- material includes -->
+                        <div class="course-material-include">
+                            <h3>Material Includes</h3>
+                            <div>
+                                <i class="fa-regular fa-circle-check"></i>
+                                <span>Videos</span>
+                            </div>
+                            <div>
+                                <i class="fa-regular fa-circle-check"></i>
+                                <span>Booklets</span>
+                            </div>
+                        </div>
+                        <!-- Enroll & Whishlist -->
+                        <div class="course-enroll-wishlist">
+                            <div>
+                                <button class="course-enroll-btn" type="button"> <i class="fa-solid fa-cart-shopping"></i> Enroll Now </button>
+                            </div>
+                            <div>
+                                <button class="course-wishlist-btn" type="button">Add to whishlist</button>
+                            </div>
+                        </div>
+                        <!-- social media links -->
+                        <div class="course-social-media-link">
+                            <div> <a href="#"><i class="fa-brands fa-facebook"></i></a> </div>
+                            <div> <a href="#"><i class="fa-brands fa-youtube"></i></a> </div>
+                            <div> <a href="#"><i class="fa-brands fa-linkedin"></i></a> </div>
+                        </div>
+                    </div>
+                    <!-- categories label -->
+                    <div class="course-categories-label">
+                        <h2>Course Categories</h2>
+                        <div>
+                            <ul>
+                                <li><a href="#">Development</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Art & Design</a></li>
+                                <li><a href="#">Music</a></li>
+                                <li><a href="#">Lifestyle</a></li>
+                                <li><a href="#">Teaching Academics</a></li>
+                                <li><a href="#">Health & Fitness</a></li>
+                                <li><a href="#">Data Science</a></li>
+                                <li><a href="#">Finance</a></li>
+                                <li><a href="#">Personal Development</a></li>
+                                <li><a href="#">Photography</a></li>
+                                <li><a href="#">Marketing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- related courses -->
+                    <div class="course-related-label">
+                        <h2>Related Courses</h2>
+                        <div class="course-related-wrapper">
+                            <div class="course-related-item">
+                                <div>
+                                    <img src="https://edumall.vuejstemplate.com/images/courses/courses-1.jpg" alt="">
+                                </div>
+                                <div style="margin: 0 20px;">
+                                    <span> <a href="#">Successful Negotiation: Master Your Negotiating Skills</a> </span>
+                                    <p>39.00</p>
+                                </div>
+                            </div>
+                            <div class="course-related-item">
+                                <div>
+                                    <img src="https://edumall.vuejstemplate.com/images/courses/courses-1.jpg" alt="">
+                                </div>
+                                <div style="margin: 0 20px;">
+                                    <span> <a href="#">Successful Negotiation: Master Your Negotiating Skills</a> </span>
+                                    <p>39.00</p>
+                                </div>
+                            </div>
+                            <div class="course-related-item">
+                                <div>
+                                    <img src="https://edumall.vuejstemplate.com/images/courses/courses-1.jpg" alt="">
+                                </div>
+                                <div style="margin: 0 20px;">
+                                    <span> <a href="#">Successful Negotiation: Master Your Negotiating Skills</a> </span>
+                                    <p>39.00</p>
+                                </div>
+                            </div>
+                            <div class="course-related-item">
+                                <div>
+                                    <img src="https://edumall.vuejstemplate.com/images/courses/courses-1.jpg" alt="">
+                                </div>
+                                <div style="margin: 0 20px;">
+                                    <span> <a href="#">Successful Negotiation: Master Your Negotiating Skills</a> </span>
+                                    <p>39.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact, About us -->
+            <div class="container contact-about-us">
+                <div class="contact-about-us-wrapper">
+                    <!-- Contact -->
+                    <div class="contact-info">
+                        <!-- Contact Info -->
+                        <a href="#"><img class="logo" src="https://edumall.vuejstemplate.com/images/logo/dark-logo.png" alt=""></a>
+                        <div style="margin: 40px 0 30px 0;">
+                            <p>Call us</p>
+                            <span><a href="#" style="text-decoration: none; font-weight: 600; color: #0071DC;">800 388 80 90</a></span>
+                        </div>
+                        <p>58 Howard Street #2 San Francisco</p>
+                        <p><a href="#" class="contact-us-email">contact@edumall.com</a></p>
+                        <!-- Contact Media -->
+                        <div class="contact-media-icon">
+                            <a href="#"> <i class="fa-brands fa-facebook-f"></i> </a>
+                            <a href="#"> <i class="fa-brands fa-youtube"></i> </a>
+                            <a href="#"> <i class="fa-brands fa-linkedin-in"></i> </a>
+                        </div>
+                    </div>
+                    <div class="contact-about-link-support">
+                        <!-- About -->
+                        <div>
+                            <h4>About</h4>
+                            <div class="about-list-wrap">
+                                <ul>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Courses</a></li>
+                                    <li><a href="#">Instructor</a></li>
+                                    <li><a href="#">Events</a></li>
+                                    <li><a href="#">Become A Teacher</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Links -->
+                        <div>
+                            <h4>Links</h4>
+                            <div class="link-list-wrap">
+                                <ul>
+                                    <li><a href="#">News & Blogs</a></li>
+                                    <li><a href="#">Library</a></li>
+                                    <li><a href="#">Gallery</a></li>
+                                    <li><a href="#">Partners</a></li>
+                                    <li><a href="#">Career</a></li>
+                                    <li><a href="#">Courses</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Support -->
+                        <div>
+                            <h4>Support</h4>
+                            <div class="support-list-wrap">
+                                <ul>
+                                    <li><a href="#">FAQs</a></li>
+                                    <li><a href="#">Forum</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">Documentation</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms & Condition</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer -->
+            <hr width="80%" style="margin: 20px auto; opacity: 0.4;">
+            <div class="footer">
+                <div class="footer-left">
+                    <a href="#">Terms Of Use</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="footer-right">
+                    <p>© 2024 EduMall </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./func.js"></script>
+</body>
+</html>

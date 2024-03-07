@@ -1,0 +1,174 @@
+  /* 1440px */
+  @media only screen and (max-width: 1440px) {
+    .container {
+      padding: 0 15px;
+    }
+
+    .nav ul {
+      justify-content: center;
+    }
+
+    .left-main-bg {
+      text-align: center;
+    }
+    .right-main-bg {
+      text-align: center;
+    }
+
+    .this-hide-1440px {
+      display: none;
+    }
+    .this-block-1440px {
+      display: block;
+    }
+
+    .nav ul {
+      justify-content: space-around;
+    }
+
+    .contact-about-us {
+      width: 90%;
+    }
+
+    .course-feedback-rating progress{
+      width: 40%;
+    }
+  }
+  /* 1200px */
+  @media only screen and (max-width: 1200px) {
+    .course-right-side{
+      position: static;
+      right: auto;
+      top: auto;
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    .course-detail-about,
+    .course-detail-objective,
+    .course-detail-requirement,
+    .course-detail-target-audience,
+    .course-curriculum,
+    .course-instructor,
+    .course-student-feedback,
+    .course-write-review{
+      width: 100%;
+    }
+
+    .course-student-feedback-wrapper{
+      display: block;
+    }
+
+    .course-feedback-rating progress{
+      width: 65%;
+    }
+
+    .contact-about-us-wrapper{
+      display: block;
+      padding: 10px 50px;
+    }
+
+    .contact-about-link-support{
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+
+  /* 766px */
+  @media only screen and (max-width: 766px) {
+    .container {
+      padding: 30px 30px;
+    }
+
+    .main-bg {
+      flex-direction: column;
+      /* padding: 5rem; */
+      height: auto;
+    }
+
+    .t1,
+    .t2 {
+      text-align: left;
+    }
+
+    .t1 {
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .t2 {
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .btn-find-course {
+      text-align: left;
+    }
+
+    .this-hide-766px {
+      display: none;
+    }
+
+    .this-block-766px {
+      display: block;
+    }
+
+    .subject-area-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .status-e-learn-wrapper {
+      display: block;
+    }
+
+    .collab-partner-icon {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .sub-to-new-wrapper {
+      display: block;
+      text-align: center;
+    }
+
+    .contact-about-us-wrapper {
+      flex-direction: column;
+    }
+
+    .course-detail-instructor-date ul,
+    .course-rating-enroll ul {
+      flex-direction: column; /* Stack items vertically */
+      align-items: flex-start;
+    }
+
+    .course-detail-instructor-date li,
+    .course-rating-enroll li {
+      margin: 5px 0;
+    }
+
+    .course-detail-instructor-date ul li+li:before,
+    .course-rating-enroll ul li+li:before {
+      content: none; 
+    }
+
+    .course-breadcrumb-navigation{
+      padding: 15px 50px;
+    }
+
+  }
+
+  /* 639px */
+  @media only screen and (max-width: 639px) {
+    .subject-area-wrapper {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .sidenav-content {
+      width: 100%;
+    }
+  }
+  /* 480px */
+  @media only screen and (max-width: 480px) {
+    .collab-partner-icon {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
